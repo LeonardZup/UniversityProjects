@@ -1,13 +1,13 @@
 @font-face{
     font-family: "Mono";
-    src: url("../fonts/JetBrainsMono/JetBrainsMono-Thin.ttf") format("truetype");
+    src: url("../fonts/JetBrainsMono-Thin.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face{
     font-family: "Mono";
-    src: url("../fonts/JetBrainsMono/JetBrainsMono-Bold.ttf") format("truetype");
+    src: url("../fonts/JetBrainsMono-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
