@@ -1,0 +1,32 @@
+.visualizer_bar {
+    grid-area: visualizer_bar;
+    display: flex;
+    height: 100%;
+    width: auto;
+    position: relative;
+    user-select: none;
+    background-color: black;
+}
+
+.left_visualizer_bar, .right_visualizer_bar {
+    height: 100%;
+    width: 2rem;
+    border: 1px solid var(--element_border);
+}
+
+.label_left_visualizer, .label_right_visualizer {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--element_alt);
+    text-transform: uppercase;
+}
+
+.label_left_visualizer {
+    bottom: -2rem;
+    left: 0.7rem;
+}
+
+.label_right_visualizer {
+    bottom: -2rem;
+    left: 2.7rem;
+}

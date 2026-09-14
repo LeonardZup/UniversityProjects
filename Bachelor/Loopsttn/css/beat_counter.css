@@ -1,0 +1,17 @@
+.beat_counter {
+    margin-left: auto;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.beat_led {
+    width: 5rem;
+    height: 0.8rem;
+    background-color: black;
+    border: 1px solid var(--element_border);
+}
+
+.beat_led.active {
+    background-color: white;
+}

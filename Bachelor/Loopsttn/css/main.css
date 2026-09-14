@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    background-color: var(--background_color);
+    font-family: "Mono", sans-serif;
+    color: white;
+    min-height: 100vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.home_link {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.footer_elem {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.user_logout{
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.user_logout:hover {
+    color: transparent;
+}
+
+.user_logout:hover::after{
+    color: white;
+    content: "LOGOUT";
+    position: absolute;
+    right: 0;
+    top: 0;
+}

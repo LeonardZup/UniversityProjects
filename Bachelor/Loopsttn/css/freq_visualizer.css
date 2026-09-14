@@ -1,0 +1,16 @@
+.freq_visualizer {
+    grid-area: freq_visualizer;
+    width: 100%;
+    height: 8rem;
+    background-color: black;
+    border: 1px solid var(--element_border);
+    box-sizing: border-box;
+    display: flex;
+    padding: 0.5rem;
+    align-self: end;
+}
+
+.freq_canvas {
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,58 @@
+.strip_pad {
+    position: relative;
+    display: flex;
+    width: 15rem;
+    height: 3.5rem;
+    background-color: var(--element_color);
+    border: 1px solid var(--element_border);
+    user-select: none;
+    cursor: pointer;
+}
+
+.strip_stage {
+    height: 100%;
+    width: 25%;
+    border: none;
+}
+
+.strip_stage + .strip_stage {
+    border-left: 1px solid var(--element_border);
+}
+
+.strip_cursor {
+    position: absolute;
+    width: 5px;
+    height: 90%;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 15px white;
+    pointer-events: none;
+    transform: translate(-75%, -50%);
+    display: none;
+    top: 50%;
+    user-select: none;
+}
+
+.pad_area{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.strip_label {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--element_alt);
+    text-transform: uppercase;
+    bottom: -2rem;
+}
+
+.stutter_pad {
+    grid-area: stutter_pad;
+}
+.roll_pad {
+    grid-area: roll_pad;
+}

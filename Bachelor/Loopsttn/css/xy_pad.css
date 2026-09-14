@@ -1,0 +1,67 @@
+.xy_pad {
+    position: relative;
+    width: 15rem;
+    height: 10rem;
+    background-color: var(--element_color);
+    border: 1px solid var(--element_border);
+    background-image: radial-gradient(var(--element_alt) 1px, transparent 0px);
+    background-size: 20px 20px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.xy_cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 15px white;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    display: none;
+    user-select: none;
+}
+
+.pad_area{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.xy_label {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--element_alt);
+    text-transform: uppercase;
+    bottom: -2rem;
+}
+
+.xy_axis_label {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--element_alt);
+    background-color: var(--element_color);
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.xy_axis_label.top-left {
+    top: 5px;
+    left: 5px;
+
+}
+.xy_axis_label.bottom-right {
+    bottom: 5px; right:
+    5px;
+}
+
+.filter_pad {
+    grid-area: filter_pad;
+}
+
+.delay_pad {
+    grid-area: delay_pad;
+}

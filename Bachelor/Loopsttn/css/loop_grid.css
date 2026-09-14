@@ -1,0 +1,63 @@
+.loop_grid {
+    grid-area: loop_grid;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.4rem;
+    width: auto;
+}
+
+.loop_pad {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--element_color);
+    border: 1px solid var(--element_border);
+    width: 6rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.active { background-color: var(--accent_color); }
+
+.led {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.active .led {
+    background-color: white;
+    box-shadow: 0 0 2px white;
+}
+
+.name {
+    color: white;
+    font-family: "Mono", sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    0%, 100% { background-color: var(--element_color); }
+    50% { background-color: var(--element_border); }
+}
+
+.wait_playing {
+    animation: blink 1s infinite;
+}
+
+.wait_stopped {
+    background-color: var(--element_border);
+}
+
+.wait_playing .led, .wait_stopped .led {
+    background-color: white;
+}

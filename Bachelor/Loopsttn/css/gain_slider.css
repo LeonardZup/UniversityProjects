@@ -1,0 +1,31 @@
+.gain_slider {
+    grid-area: gain_slider;
+    position: relative;
+    align-items: center;
+    background-color: black;
+    border: 1px solid var(--element_border);
+    border-radius: 2rem;
+    height: 100%;
+    width: 1.5rem;
+    user-select: none;
+}
+
+.gain_cursor {
+    position: relative;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 13px;
+}
+
+.label_gain {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--element_alt);
+    text-transform: uppercase;
+    bottom: -2rem;
+    left: -0.5rem;
+}

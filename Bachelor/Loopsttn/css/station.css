@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.station_container {
+    display: grid;
+    width: auto;
+    grid-template-columns: auto auto auto auto auto; 
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "controls options options options options"
+                         "loop_grid filter_pad delay_pad gain_slider visualizer_bar"
+                         "loop_grid stutter_pad roll_pad gain_slider visualizer_bar"
+                         "loop_grid freq_visualizer freq_visualizer gain_slider visualizer_bar";
+    padding: 2.5rem;
+    grid-gap: 2.5rem;
+    justify-content: center;
+}
+
+.controls {
+    grid-area: controls;
+    display: flex;
+    width: 100%;
+}
+
+.options {
+    grid-area: options;
+    display: flex;
+    width: 100%;
+}
+
+.play_button {
+    font: inherit;
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--accent_color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.stop_button {
+    font: inherit;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 1.5rem;
+}
+
+.bpm_display {
+    margin-left: auto;
+    align-self: center;
+    color: white;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.set_selection {
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+    width: 15rem;
+    height: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font: inherit;
+    background-color: var(--element_color);
+    border: 1px solid var(--element_border);
+    cursor: pointer;
+}
+
+.save_button, .load_button {
+    font: inherit;
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--element_color);
+    border: 1px solid var(--element_border);
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.load_button {
+    margin-left: 1.5rem;
+}
+
+.save_overlay, .load_overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.save_overlay.open, .load_overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.save_menu, .load_menu {
+    border: 1px solid var(--element_border);
+    background-color: var(--element_color);
+    padding: 1.5rem;
+    color: white;
+    width: 25rem;
+    min-height: 10rem;
+    box-sizing: border-box;
+}
+
+.save_overlay input {
+    font: inherit;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: var(--element_color);
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.save_form button {
+    font: inherit;
+    height: 2.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.save_form button:hover{
+    background-color: var(--accent_color);
+    border: 1px solid var(--accent_color);
+    color: white;
+}
+
+.menu_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid var(--element_alt);
+    margin-bottom: 1rem;
+}
+
+.close_save, .close_load, .delete_preset {
+    background: none;
+    border: none;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.preset_elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border: 1px solid var(--element_alt);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.preset_elem:hover {
+    background-color: var(--element_alt);
+}
+
+.preset_elem_type {
+    color: var(--element_alt);
+}
+
+.error_message {
+    margin-bottom: 1rem;
+    color: var(--accent_color);
+}
+
+.loading {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-transform: uppercase;
+}

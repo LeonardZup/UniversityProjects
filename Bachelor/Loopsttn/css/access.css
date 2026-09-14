@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-color: var(--background_color);
+    font-family: "Mono", sans-serif;
+    color: white;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--element_color);
+
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 15vh;
+
+    margin-left: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border-left: 1px solid var(--element_border);
+
+    box-sizing: border-box;
+    width: 40%;
+    min-width: 25rem;
+    max-width: 45rem
+}
+
+.form_container h2{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: "Mono", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form_elem {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_elem input {
+    font: inherit;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    background-color: var(--element_color);
+    color: white;
+}
+
+.form_elem button {
+    font: inherit;
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.form_elem button:hover {
+    background-color: var(--accent_color);
+    border: 1px solid var(--accent_color);
+    color: white;
+}
+
+.switch_signup {
+    margin-top: 1rem;
+}
+
+.switch_signup a {
+    text-decoration: underline;
+    color: var(--accent_color);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.footer_elem{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.error_container{
+    margin-bottom: 1rem;
+    height: 1rem;
+}
+
+.error_container span{
+    font-size: 1rem;
+    font-family: "Mono", sans-serif;
+    color: var(--accent_color);
+}
+
+.label_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.input_format {
+    font-size: 0.8rem;
+    color: gray;
+    text-transform: uppercase;
+    font-family: "Mono", sans-serif;
+}
+
+.error_active {
+    color: var(--accent_color) !important;
+}
